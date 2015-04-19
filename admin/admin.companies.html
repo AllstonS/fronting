@@ -1,0 +1,49 @@
+
+
+<div class='container container-admin'>
+
+    <h3>Welcome {{adminCtrl.username}}</h3>
+
+  <div class="searchbox-wrapper">
+    <input ng-model="query" type="text" name="searchbox" placeholder="filter companies">
+    <a href="#/"><span class="fa-lg">
+      <i class="fa fa-home"></i>
+    </span>Home</a>
+    <a href="#/addcompany"><span class="fa-lg">
+      <i class="fa fa-plus"></i>
+    </span>Add Company</a>
+  </div>
+
+  <table class ="company-table table table-striped">
+    <thead>
+
+      <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Street Address 1</th>
+        <th>Street Address 2</th>
+        <th>City</th>
+        <th>ZIP</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>View More / Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-item animate-repeat" ng-repeat="company in adminCtrl.companies | orderBy: 'name'| filter:query as results">
+
+        <td class="logo"><img data-ng-src={{company.logo}} /></td>
+        <td class="name">{{company.name}}</td>
+        <td class="address1">{{company.address1}}</td>
+        <td class="address2">{{company.address2}}</td>
+        <td class="city">{{company.city}}</td>
+        <td class="zip">{{company.zip}}</td>
+        <td class="phone">{{company.phone}}</td>
+        <td class="website">{{company.website}}</td>
+        <td>
+          <a href="#/edit/{{company._id}}">View More / Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
