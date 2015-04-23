@@ -8,19 +8,19 @@
   .config(function($routeProvider){
     $routeProvider
     .when('/list', {
-      templateUrl: 'front/front.companies.html',
+      templateUrl: 'fronting/front.companies.html',
       controller: 'CompanyController as compCtrl'
     })
     .when('/map', {
-      templateUrl: 'front/front.map.html',
+      templateUrl: 'frontingfront/front.map.html',
       controller: 'CompanyController as compCtrl'
     })
     .when('/favorites', {
-      templateUrl: 'front/front.favorites.html',
+      templateUrl: 'fronting/front.favorites.html',
       controller: 'CompanyController as compCtrl'
     })
     .when('/details/:companyId', {
-      templateUrl: 'front/front.companydetail.html',
+      templateUrl: 'fronting/front.companydetail.html',
       controller: 'CompanyController as compCtrl'
     })
   });
