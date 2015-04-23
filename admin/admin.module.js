@@ -12,11 +12,11 @@
       controller: 'AdminController as adminCtrl'
     })
     .when('/addcompany', {
-      templateUrl: 'fronting/admin/admin.addcompany.html',
+      templateUrl: 'admin/admin.addcompany.html',
       controller: 'AdminController as adminCtrl'
     })
     .when('/edit/:companyId', {
-      templateUrl: 'fronting/admin/admin.editcompany.html',
+      templateUrl: 'admin/admin.editcompany.html',
       controller: 'AdminController as adminCtrl'
     })
 
