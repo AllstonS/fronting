@@ -8,7 +8,7 @@
   .config(function ($routeProvider) {
     $routeProvider
     .when('/admincompanies', {
-      templateUrl: 'fronting/admin/admin.companies.html',
+      templateUrl: 'admin/admin.companies.html',
       controller: 'AdminController as adminCtrl'
     })
     .when('/addcompany', {
